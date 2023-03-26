@@ -40,9 +40,13 @@ def fix_command(known_args):
             return
 
         corrected_commands = get_corrected_commands(command)
+        for command in corrected_commands:
+            print(command.script)
+        '''
         selected_command = select_command(corrected_commands)
 
         if selected_command:
             selected_command.run(command)
         else:
             sys.exit(1)
+        '''
